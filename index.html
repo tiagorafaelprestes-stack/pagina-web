@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWorld - Blog de Tecnologia</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #1a1a2e;
+            color: #fff;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: #00adb5;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00adb5;
+        }
+
+        /* Conteúdo Principal */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Artigos */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .post {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .post-img {
+            width: 100%;
+            height: 350px;
+            background-color: #ddd;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        .post-category {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #00adb5;
+            letter-spacing: 1px;
+        }
+
+        .post h2 {
+            margin: 0.5rem 0;
+            color: #1a1a2e;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+
+        .post p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .btn-read-more {
+            display: inline-block;
+            background-color: #1a1a2e;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .btn-read-more:hover {
+            background-color: #00adb5;
+        }
+
+        /* Barra Lateral (Sidebar) */
+        aside {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+
+        aside h3 {
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #00adb5;
+            padding-bottom: 0.3rem;
+        }
+
+        .sidebar-list {
+            list-style: none;
+        }
+
+        .sidebar-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        .sidebar-list a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .sidebar-list a:hover {
+            color: #00adb5;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1a1a2e;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .post-img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>TechWorld</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Notícias</a>
+            <a href="#">Análises</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <main class="main-content">
+            
+            <article class="post">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800" alt="Inteligência Artificial" class="post-img">
+                <span class="post-category">Inteligência Artificial</span>
+                <h2>O Impacto da IA no Mercado de Trabalho Atual</h2>
+                <div class="post-meta">Postado em 18 de Junho de 2026 por Editor Tech</div>
+                <p>A inteligência artificial deixou de ser uma promessa para o futuro e se tornou uma ferramenta essencial no dia a dia das empresas. Desde a automação de tarefas repetitivas até a análise de grandes volumes de dados para tomadas de decisão, a IA está transformando profissões e exigindo que os profissionais desenvolvam novas habilidades para acompanhar essa evolução tecnológica.</p>
+                <a href="#" class="btn-read-more">Ler Mais</a>
+            </article>
+
+            <article class="post">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800" alt="Cibersegurança" class="post-img">
+                <span class="post-category">Segurança Digital</span>
+                <h2>Como Proteger seus Dados na Era da Conectividade</h2>
+                <div class="post-meta">Postado em 15 de Junho de 2026 por Equipe Tech</div>
+                <p>Com o aumento de dispositivos conectados em nossas casas e escritórios, a cibersegurança se tornou uma prioridade. Ataques de phishing e vazamentos de dados estão cada vez mais sofisticados. Neste artigo, exploramos as melhores práticas, como o uso de autenticação de dois fatores (2FA) e gerenciadores de senhas, para manter suas informações pessoais seguras na internet.</p>
+                <a href="#" class="btn-read-more">Ler Mais</a>
+            </article>
+
+        </main>
+
+        <aside>
+            <h3>Sobre o Blog</h3>
+            <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">O TechWorld é o seu espaço para encontrar as últimas atualizações, artigos informativos e análises sobre o universo da tecnologia e inovação.</p>
+
+            <h3>Categorias</h3>
+            <ul class="sidebar-list">
+                <li><a href="#">• Inteligência Artificial</a></li>
+                <li><a href="#">• Cibersegurança</a></li>
+                <li><a href="#">• Gadgets & Hardware</a></li>
+                <li><a href="#">• Desenvolvimento Web</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TechWorld. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html><article class="post">
+    <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800" alt="Computação Quântica" class="post-img">
+    <span class="post-category">Computação Quântica</span>
+    <h2>O que é Computação Quântica e por que ela importa?</h2>
+    <div class="post-meta">Postado em 18 de Junho de 2026 por Prof. Carlos</div>
+    <p>Diferente dos computadores tradicionais que usam bits (0 e 1) para processar informações, os computadores quânticos utilizam qubits, que podem existir em múltiplos estados simultaneamente graças à superposição. Na prática, isso significa uma capacidade de processamento absurdamente maior, capaz de resolver em minutos problemas matemáticos e simulações científicas que levariam milhares de anos nos supercomputadores atuais.</p>
+    <a href="#" class="btn-read-more">Ler Mais</a>
+</article>
+
+<article class="post">
+    <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?w=800" alt="Tecnologia Verde" class="post-img">
+    <span class="post-category">Sustentabilidade</span>
+    <h2>Green Tech: A tecnologia a favor do meio ambiente</h2>
+    <div class="post-meta">Postado em 17 de Junho de 2026 por Mariana Luz</div>
+    <p>O setor de tecnologia consome muita energia, mas a tendência da "Green Tech" (Tecnologia Verde) busca reverter esse impacto. Desde data centers alimentados 100% por energia solar e eólica até o desenvolvimento de hardwares com componentes reciclados e maior eficiência energética, a indústria está se unindo para criar um ecossistema digital mais sustentável e consciente.</p>
+    <a href="#" class="btn-read-more">Ler Mais</a>
+</article><h3 style="margin-top: 2rem;">Notícias Rápidas</h3>
+<ul class="sidebar-list" style="font-size: 0.9rem;">
+    <li>
+        <strong>Redes 6G:</strong> 
+        <p style="color: #666; margin-bottom: 0.5rem;">Testes iniciais em laboratório alcançam velocidades 100 vezes maiores que o 5G atual.</p>
+    </li>
+    <li>
+        <strong>Baterias de Estado Sólido:</strong> 
+        <p style="color: #666; margin-bottom: 0.5rem;">Nova tecnologia promete dobrar a autonomia dos smartphones nos próximos anos.</p>
+    </li>
+</ul><article class="post" style="border-left: 5px solid #00adb5; background-color: #fafafa;">
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" alt="Futuro da Tecnologia" class="post-img" style="height: 400px;">
+    <span class="post-category" style="background: #00adb5; color: #fff; padding: 0.2rem 0.5rem; border-radius: 3px;">Grande Destaque</span>
+    <h2 style="font-size: 2rem; margin-top: 0.8rem;">O Guia Definitivo para a Web 4.0: O que esperar da internet descentralizada?</h2>
+    <div class="post-meta">Postado hoje por Redação TechWorld</div>
+    <p>A Web 3.0 mal se consolidou e os especialistas já desenham os pilares da Web 4.0. Esta nova era promete ser totalmente simbiótica, onde a interação entre humanos e máquinas será em tempo real e ultra-personalizada, impulsionada por assistentes de IA nativos do sistema operacional da web e total descentralização de dados através de redes blockchain avançadas. O usuário finalmente terá controle total sobre sua identidade digital.</p>
+    <a href="#" class="btn-read-more" style="background-color: #00adb5;">Ler Artigo Completo</a>
+</article><article class="post">
+    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800" alt="Computação em Nuvem" class="post-img">
+    <span class="post-category">Infraestrutura</span>
+    <h2>Edge Computing: Processando dados na velocidade da luz</h2>
+    <div class="post-meta">Postado em 14 de Junho de 2026 por Lucas Cloud</div>
+    <p>Enviar todos os dados para servidores centrais na nuvem pode gerar atrasos (latência) inviáveis para tecnologias como carros autônomos ou cirurgias remotas. É aí que entra o <em>Edge Computing</em> (Computação de Borda), que processa as informações o mais próximo possível de onde elas são geradas — no próprio dispositivo ou em antenas locais. Isso garante respostas imediatas e reduz o tráfego global na internet.</p>
+    <a href="#" class="btn-read-more">Ler Mais</a>
+</article>
+
+<article class="post">
+    <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800" alt="Realidade Virtual" class="post-img">
+    <span class="post-category">Entretenimento & Trabalho</span>
+    <h2>A Evolução dos Óculos de Realidade Mista na Rotina de Trabalho</h2>
+    <div class="post-meta">Postado em 12 de Junho de 2026 por Beatriz Silva</div>
+    <p>Os dispositivos de Realidade Mista (MR) deixaram de ser brinquedos de videogame para se tornarem monitores virtuais de alta produtividade. Profissionais de arquitetura, medicina e design agora utilizam interfaces espaciais para manipular modelos 3D flutuando na própria sala de estar, permitindo uma colaboração remota que parece tão real quanto uma reunião presencial.</p>
+    <a href="#" class="btn-read-more">Ler Mais</a>
+</article><div style="margin-top: 2.5rem; background: #1a1a2e; color: #fff; padding: 1.2rem; border-radius: 6px; text-align: center;">
+    <h3 style="color: #00adb5; border: none; margin-bottom: 0.5rem;">Fique Atualizado!</h3>
+    <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #ccc;">Receba nossas principais notícias tecnológicas direto no seu e-mail.</p>
+    <input type="email" placeholder="Seu melhor e-mail" style="width: 100%; padding: 0.6rem; margin-bottom: 0.8rem; border: none; border-radius: 4px; outline: none;">
+    <button style="width: 100%; background: #00adb5; color: white; border: none; padding: 0.6rem; border-radius: 4px; font-weight: bold; cursor: pointer; transition: 0.3s;" onmouseover="this.style.background='#fff'; this.style.color='#1a1a2e'" onmouseout="this.style.background='#00adb5'; this.style.color='#fff'">Inscrever-se</button>
+</div><div style="background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; gap: 1rem; align-items: center;">
+    <input type="text" placeholder="Buscar artigos, tutoriais ou notícias..." style="flex: 1; padding: 0.6rem; border: 1px solid #ddd; border-radius: 4px; outline: none; font-size: 0.95rem;">
+    <button style="background: #00adb5; color: white; border: none; padding: 0.6rem 1.5rem; border-radius: 4px; font-weight: bold; cursor: pointer;">Buscar</button>
+</div><article class="post">
+    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800" alt="Programação" class="post-img">
+    <span class="post-category">Desenvolvimento</span>
+    <h2>O Boom do No-Code e Low-Code: Programar ainda é necessário?</h2>
+    <div class="post-meta">Postado em 10 de Junho de 2026 por André Dev</div>
+    <p>As plataformas No-Code (Sem Código) e Low-Code (Pouco Código) estão permitindo que pessoas sem conhecimento técnico criem aplicativos e sistemas complexos visualmente. Embora isso acelere a inovação nas empresas e democratize a criação digital, o papel do programador tradicional continua vital para arquiteturas complexas, segurança de dados e desenvolvimento das próprias ferramentas que sustentam o No-Code.</p>
+    <a href="#" class="btn-read-more">Ler Mais</a>
+</article>
+
+<article class="post">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="Internet das Coisas" class="post-img">
+    <span class="post-category">IoT & Cidades Inteligentes</span>
+    <h2>Como as Cidades Inteligentes estão usando IoT para reduzir o trânsito</h2>
+    <div class="post-meta">Postado em 08 de Junho de 2026 por Engenheiro Roberto</div>
+    <p>A Internet das Coisas (IoT) está transformando os centros urbanos. Sensores instalados em semáforos, vias públicas e transporte coletivo coletam dados em tempo real sobre o fluxo de veículos. Algoritmos de inteligência artificial analisam esses dados para ajustar o tempo dos sinais de trânsito dinamicamente, reduzindo congestionamentos, emissões de carbono e o tempo de deslocamento dos cidadãos.</p>
+    <a href="#" class="btn-read-more">Ler Mais</a>
+</article>
